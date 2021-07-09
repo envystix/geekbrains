@@ -1,0 +1,21 @@
+// Mixines
+// Container
+@mixin container($width)
+    width: 100%
+    padding: 0 calc(50% - #{$width} / 2 )
+// Flex
+@mixin flex($direction: row, $justify-content: center, $align-items: center)
+    display: flex
+    flex:
+        direction: $direction
+        wrap: wrap
+    justify-content: $justify-content
+    align-items: $align-items
+// Hide header
+@mixin hidden()
+    visibility: hidden
+    width: 0
+    height: 0
+    position: absolute
+    left: -99999px
+    

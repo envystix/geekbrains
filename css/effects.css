@@ -1,0 +1,120 @@
+.icon-dark-bg:hover {
+  fill: #f595a2;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.breadcrumb-hover:hover {
+  color: #5d5d5d;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.pagination-digits:hover {
+  color: #f16d7f;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.subscribe-form:hover {
+  -webkit-box-shadow: 0 12px 20px -12px #00000048;
+          box-shadow: 0 12px 20px -12px #00000048;
+  -webkit-transition: .7s;
+  transition: .7s;
+}
+
+.subscribe-form-button:hover {
+  color: #5d5d5d;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.btn-brd-pink:hover {
+  background-color: #f16d7f;
+  color: #fff;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.btn-brd-grey:hover {
+  background-color: #f16d7f;
+  border: none;
+  color: #fff;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.btn-pink:hover {
+  -webkit-box-shadow: 0 12px 20px -12px #00000048;
+          box-shadow: 0 12px 20px -12px #00000048;
+  color: #222;
+  -webkit-transition: .7s;
+  transition: .7s;
+}
+
+.close-btn:hover {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: .7s;
+  transition: .7s;
+}
+
+.navigation:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.main__product_card-options-button:hover .main__product_card-options-button-icon {
+  fill: #fff;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.social-buttons:hover {
+  background-color: #f16d7f;
+  fill: #fff;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.product-card-hover:hover .product-card-hover-img {
+  opacity: 1;
+  -webkit-transition: .7s;
+  transition: .7s;
+}
+
+.slider-nav-left:hover, .slider-nav-right:hover {
+  fill: #f16d7f;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.main__catalog-filter-sort-menu:checked ~ .main__catalog-filter-sort-text {
+  color: #f16d7f;
+  fill: #f16d7f;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.main__catalog-filter-sort-menu:checked ~ .main__catalog-flter-sort-dropdown {
+  display: block;
+}
+
+.main__catalog-filter-sort-menu:not(:checked) ~ .main__catalog-flter-sort-dropdown {
+  display: none;
+}
+
+.main__catalog-filter-options-menu-size:checked ~ .main__catalog-filter-options-menu-size-dropdown {
+  display: block;
+}
+
+.main__catalog-filter-options-menu-size:not(:checked) ~ .main__catalog-filter-options-menu-size-dropdown {
+  display: none;
+}
+
+.main__registration-form-btn:hover {
+  fill: #222;
+}
+/*# sourceMappingURL=effects.css.map */

@@ -1,0 +1,862 @@
+@import fonts
+@import variables
+@import mixines
+@import reset
+// Grid
+.container
+    +container(1140px)
+.columns
+    +flex(row, space-between, center)
+.no-vert-margin
+    margin-top: 0px
+    margin-bottom: 0px
+// UI Kit
+.hidden
+    +hidden()
+.main-menu
+    +flex(row, space-between, center)
+    height: 75px
+    background-color: $black
+.page_header
+    height: 148px
+    background-color: #f8f3f4
+    text-transform: uppercase
+    +flex(row, space-between, center)
+    &-title
+        font: 
+            size: 24px
+            weight: $regular
+        color: $pink
+    &-breadcrumbs
+        font: 
+            size: 14px
+            weight: $light
+        color: $pink
+        &-active
+            font-weight: $bold
+.icon-dark-bg
+    fill: $white
+.notification
+    position: relative
+    &-icon
+        position: absolute
+        bottom: 0px
+    &-count
+        width: 19px
+        height: 19px
+        border-radius: 50%
+        background-color: $pink
+        position: absolute
+        top: 0px
+        right: 0px
+        +flex(row, center, center)
+        color: $white
+        font:
+            size: 12px
+            weight: $regular
+.navigation
+    +flex(column, center, center)
+    background-color: $lightgrey
+    text:
+        transform: uppercase
+        align: center
+    line-height: 1.2
+    &-title
+        display: block
+        font:
+            size: 24px
+            weight: $bold
+        color: $pink
+    &-subtitle
+        font:
+            size: 16px
+            weight: $regular
+        color: $white
+.pagination
+    width: 284px
+    height: 44px
+    border: 1px solid #ebebeb
+    border-radius: 2px
+    padding: 0 41px
+    +flex(row, space-between, center)
+    position: relative
+    &-arrow_left
+        position: absolute
+        left: 0
+        fill: #000
+        height: 14px
+        margin-left: 16px
+    &-arrow_right
+        position: absolute
+        right: 0
+        fill: #000
+        height: 14px
+        margin-right: 16px
+    &-space
+        display: flex
+        flex: 1 0
+    &-dots
+        display: flex
+        flex: 1 0
+        border-bottom: 1.8px dotted #c4c4c4
+        height: 0.62em
+    &-digits_block
+        +flex(row, space-between, center)
+    &-digits
+        font:
+            size: 16px
+            weight: $light
+        color: #c4c4c4
+        &-active
+            color: $pink
+.product-card
+    width: 32%
+    background-color: $lightgrey
+    &-link
+        color: $black
+    &-img-wrapper
+        width: 100%
+        height: 37%
+        position: relative
+        object-fit: contain
+    &-img
+        width: 100%
+        max-height: 100%
+        object-fit: contain
+    &-text
+        padding: 0 29px 0 18px
+    &-title
+        margin-top: 25px
+        font:
+            size: 13px
+            weight: $regular
+        color: #000
+        text-transform: uppercase
+    &-description
+        margin-top: 13px
+        font:
+            size: 14px
+            weight: $light
+        color: $darkgrey
+    &-cost
+        margin-top: 18px
+        margin-bottom: 20px
+        font:
+            size: 16px
+            weight: $regular
+        color: $pink
+.cart-item
+    width: 100%
+    +flex(row, space-between, stretch)
+    box-shadow: 17px 19px 24px 0px #0000000d
+    &-text-pink
+        color: $pink
+    &-text-grey
+        color: #6f6e6e
+    &-input
+        width: 44px
+        height: 25px
+        margin-left: 24px
+        border: 1px solid #eaeaea
+        font:
+            size: 18px
+            weight: $regular
+        color: #656565
+        text-align: center
+    &-imglink
+        width: 40%
+        max-height: 100%
+        background-color: $lightgrey
+        +flex(column, center, center)
+        &-img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    &-description
+        width: 60%
+        height: 100%
+        padding: 22px 22px 22px 31px
+        +flex(row, space-between, flex-start)
+        &-text
+            width: 85%
+            &-title
+                font:
+                    size: 24px
+                    weight: $regular
+                color: $black
+                text-transform: uppercase
+            &-options
+                margin-top: 6px
+                font:
+                    size: 22px
+                    weight: $regular
+                color: #575757
+                &:first-of-type
+                    margin-top: 42px
+        &-delete
+            +flex(row, center, center)
+            fill: #575757
+    &-input
+        font:
+            size: 22px
+            font-weight: $regular
+.btn-brd-pink
+    border: 1px solid $pink
+    background-color: $white
+    +flex(row, center, center)
+    font:
+        size: 16px
+        weight: $regular
+    color: $pink
+    cursor: pointer
+.btn-brd-grey
+    border: 1px solid #a4a4a4
+    background-color: $white
+    +flex(row, center, center)
+    font:
+        size: 14px
+        weight: $light
+    text-transform: uppercase
+    cursor: pointer
+.btn-pink
+    background-color: $pink
+    +flex(row, center, center)
+    font:
+        size: 16px
+        weight: $light
+    color: $white
+    text-transform: uppercase
+    cursor: pointer
+.slider
+    width: 100%
+    height: 777px
+    +flex(row, center, center)
+    border: 1px solid #eaeaea
+    background-color: #f7f7f7
+    position: relative
+    &-nav
+        width: 100%
+        position: absolute
+        +flex(row, space-between, center)
+        &-left, &-right
+            fill: #000
+            width: 47px
+            height: 47px
+            background-color: #2a2a2a0f
+            +flex(row, center, center)
+.subscribe-form
+    height: 49px
+    display: flex
+    align-items: stretch
+    overflow: hidden
+    border-radius: 24px
+    &-input
+        width: 256px
+        padding: 0 22px
+        border: none
+        background-color: #e1e1e1
+        font:
+            size: 14px
+    &-input::placeholder
+        font:
+            size: 14px
+            weight: $regular
+            color: #222
+            opacity: 67%
+    &-button
+        width: 100px
+        padding: 0 auto
+        background-color: $pink
+        font:
+            size: 14px
+            weight: $regular
+        color: $white
+        cursor: pointer
+.social-buttons
+    width: 32px
+    height: 32px
+    +flex(row, center, center)
+    background-color: $white
+.tooltip
+    font:
+        size: 14px
+        weight: $regular
+    text-transform: uppercase
+    color: #6f6e6e
+    &-icon
+        margin-left: 10px
+        fill: #6f6e6e
+// Custom Elements
+.header
+    position: relative
+.header__left
+    +flex(row, flex-start, flex-end)
+.header__left-logo
+    margin-right: 41px
+.header__right
+    +flex(row, flex-end, flex-end)
+.header__right-menu, .header__right-cabinet
+    margin-right: 33px
+.header__right-menu
+    margin-bottom: 3px
+    background-color: $black
+    cursor: pointer
+.header__right-cart-wrapper
+    width: 41px
+    height: 41px
+.header__menu-overlay
+    height: 764px
+    position: absolute
+    top: 75px
+    left: 0
+    right: 0
+    z-index: 1
+    background-color: #0000007f
+    display: none
+.menu-active
+    display: flex
+.header__menu
+    width: 232px
+    height: 764px
+    right: 0
+    position: absolute
+    z-index: 2
+    background-color: $white
+    box-shadow: 0 4px 4px 0 #0000003f
+    padding: 16px 19px 16px 34px
+    +flex(column, flex-start, flex-start)
+.header__menu-close-container
+    width: 100%
+    +flex(row, flex-end, center)
+.header__menu-close-btn
+    +flex(row, center, center)
+    fill: #0000007f
+    background-color: $white
+    cursor: pointer
+.header__menu-nav
+    margin-top: 9px
+.header__menu-nav-category:not(:first-of-type)
+    margin-top: 24px
+.header__menu-nav-category-link
+    font:
+        size: 14px
+        weight: $regular
+    color: $pink
+    text-transform: uppercase
+.nav-category-link-active
+    color: #000
+    font-weight: $bold
+.header__menu-nav-item
+    margin-top: 11px
+    margin-left: 22px
+.header__menu-nav-item-link
+    font:
+        size: 14px
+        weight: $regular
+    color: #6f6e6e
+.main__cover
+    background-color: $lightpink
+    height: 764px
+    position: relative
+.main__cover-photo
+    position: absolute
+    right: 50%
+.main__cover-header
+    position: absolute
+    left: 56%
+    top: 290px
+    padding-left: 16px
+    border-left: 12px solid $pink
+    max-width: 405px
+.main__cover-header-title
+    font:
+        size: 48px
+        weight: $heavy
+    text-transform: uppercase
+    line-height: 1.2
+.main__cover-header-subtitle
+    display: block
+    font:
+        size: 32px
+        weight: $bold
+    text-transform: uppercase
+.main__cover-header-subtitle-alt
+    color: $pink
+    text-transform: uppercase
+.main__navigation
+    margin-top: 65px
+.main__navigation-promo, .main__navigation-hot_deal, .main__navigation-new_arrivals
+    width: 32%
+    height: 260px
+    background-size: cover
+.main__navigation-promo
+    background-image: url(../img/promo.jpg)
+.main__navigation-hot_deal
+    background-image: url(../img/hot-deal.jpg)
+.main__navigation-new_arrivals
+    background-image: url(../img/new-arrivals.jpg)
+.main__navigation-accesories
+    width: 100%
+    height: 180px
+    margin-top: 30px
+    margin-bottom: 96px
+    background-image: url(../img/accesories.jpg)
+.main__featured
+    +flex(column, center, center)
+.main__featured-header
+    text-align: center
+.main__featured-header-title
+    font:
+        size: 30px
+        weight: $regular
+.main__featured-header-subtitle
+    font:
+        size: 14px
+        weight: $regular
+    color: #9f9f9f
+    margin-top: 6px
+    margin-bottom: 48px
+.main__featured_cards
+    +flex(row, space-between, flex-start)
+.main__featured_cards-card_1, .main__featured_cards-card_2, .main__featured_cards-card_3
+    margin-bottom: 30px
+.main__product_card-see_also-cards-card_1, .main__product_card-see_also-cards-card_2, .main__product_card-see_also-cards-card_3
+    margin-top: 128px
+    margin-bottom: 128px
+.product-card-hover-img
+    +flex(row, center, center)
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    position: absolute
+    z-index: 1
+    background-color: #3a383886
+    opacity: 0
+.product-card-hover-btn
+    width: 139px
+    height: 44px
+    position: relative
+    background-color: #ffffff00
+    border: 1px solid $white
+    font:
+        size: 14px
+        weight: $regular
+    color: $white
+    padding-right: 14px
+    +flex(row, flex-end, center)
+    cursor: pointer
+.product-card-hover-btn-icon
+    position: absolute
+    left: 14px
+    fill: $white
+.main__featured-button
+    width: 212px
+    height: 48px
+    margin-top: 48px
+    margin-bottom: 95px
+.main__advantages
+    height: 341px
+    background-color: $black
+.main__advantages-item_1, .main__advantages-item_2, .main__advantages-item_3
+    width: 32%
+    height: 309px
+    +flex(column, center, center)
+    flex-wrap: wrap
+    fill: $pink
+.main__advantages-item_1-title, .main__advantages-item_2-title, .main__advantages-item_3-title
+    font:
+        size: 20px
+        weight: $regular
+    margin-top: 19px
+    color: $white
+.main__advantages-item_1-subtitle, .main__advantages-item_2-subtitle, .main__advantages-item_3-subtitle
+    font:
+        size: 14px
+        weight: $light
+    margin-top: 16px
+    line-height: 1.2
+    text-align: center
+    color: #fbfbfb
+    padding: 0 2%
+.main__subscribe
+    height: 448px
+    background:
+        image: url(../img/subscribe-background.jpg)
+        repeat: no-repeat
+        size: cover
+.main__subscribe-review
+    width: 32%
+    +flex(column, flex-start, center)
+.main__subscribe-review-text
+    margin-top: 30px
+    font:
+        size: 20px
+        weight: $regular
+    text-align: center
+.main__subscribe-review-text-alt
+    font-style: italic
+.main__subscribe-form
+    width: 49%
+    +flex(column, space-between, center)
+.main__subscribe-form-title
+    font:
+        size: 24px
+        weight: $bold
+    line-height: 1.2
+    text:
+        transform: uppercase
+        align: center
+.main__subscribe-form-subtitle
+    font:
+        size: 18px
+        weight: $regular
+    display: block
+    margin-bottom: 32px
+.main__catalog
+    +flex(row, space-between, center)
+.main__catalog-filter
+    width: 100%
+    height: 132px
+    +flex(row, space-between, center)
+.main__catalog-filter-sort
+    width: 32%
+    height: 20px
+    position: relative
+    +flex(row, flex-start, center)
+.main__catalog-filter-options
+    width: 65%
+    height: 20px
+    position: relative
+    +flex(row, flex-start, center)
+.main__catalog-filter-sort-menu, .main__catalog-filter-options-menu-size
+    display: none
+.main__catalog-filter-sort-text
+    display: block
+    width: 80px
+    position: absolute
+    left: 16px
+    z-index: 3
+    font:
+        size: 14px
+        weight: $bold
+    color: #000
+    text-transform: uppercase
+    cursor: pointer
+    &-alt
+        color: $pink
+        font:
+            size: 14px
+            weight: $bold
+        text-transform: uppercase
+.main__catalog-flter-sort-dropdown
+    width: 360px
+    padding: 13px 16px 16px 16px
+    position: absolute
+    background-color: $white
+    top: -13px
+    z-index: 2
+    box-shadow: 6px 4px 35px 0px #00000015
+.main__catalog-filter-sort-dropdown-category:first-of-type
+    margin-top: 46px
+.main__catalog-filter-sort-dropdown-category
+    width: 328px
+    height: 37px
+    margin-top: 18px
+    padding-left: 11px
+    border-left: 5px solid $pink
+    border-bottom: 1px solid #ebebeb
+    +flex(row, flex-start, center)
+    font:
+        size: 14px
+        weight: $regular
+    text-transform: uppercase
+.main__catalog-filter-sort-dropdown-category-link
+    color: $pink
+.main__catalog-filter-sort-dropdown-list
+    margin-top: 24px
+    margin-bottom: 24px
+    margin-left: 17px
+    +flex(column, flex-start, flex-start)
+.main__catalog-filter-sort-dropdown-list-link
+    margin-top: 11px
+    font:
+        size: 14px
+        weight: $regular
+    color: #6f6e6e
+.main__catalog-filter-sort-dropdown-list-link:first-of-type
+    margin-top: 0px
+.main__catalog-filter-options-menu
+    margin-right: 28px
+.main__catalog-filter-options-menu:last-of-type
+    margin-right: 0px
+.main__catalog-filter-options-menu-size-tooltip
+    position: relative
+    margin-right: 28px
+.main__catalog-filter-options-menu-size-dropdown
+    width: 79px
+    top: 22px
+    left: 151px
+    z-index: 2
+    padding: 7px 9px 7px 9px
+    position: absolute
+    +flex(column, space-between, flex-start)
+    background-color: $white
+    box-shadow: 6px 4px 35px 0px #00000015
+.filter-checkbox
+    border-color: #ebebeb
+.filter-size
+    margin-left: 9px
+    font:
+        size: 14px
+        weight: $regular
+    color: #6f6e6e
+.main__catalog-filter-sort-img
+    margin-left: 11px
+    &-alt
+        margin-left: 11px
+        fill: $pink
+.main__catalog-cards-card_1, .main__catalog-cards-card_2, .main__catalog-cards-card_3, .main__catalog-cards-card_4, .main__catalog-cards-card_5, .main__catalog-cards-card_6
+    margin-bottom: 30px
+.main__catalog-pagination
+    width: 100%
+    height: 140px
+    margin-bottom: 48px
+    +flex(row, center, center)
+.main__product_card
+    height: 601px
+    margin-top: -65px
+    position: relative
+.main__product_card-wrapper
+    width: 1140px
+    border: 1px solid #eaeaea
+    background-color: #fff
+    position: absolute
+    padding: 0 16px
+    +flex(column, center, center)
+.main__product_card-info
+    width: 56%
+    height: 357px
+    +flex(column, center, center)
+    border-bottom: 1px solid #eaeaea
+.main__product_card-info-subtitle
+    margin-top: 65px
+    font:
+        size: 14px
+        weight: $light
+    color: $pink
+    text-transform: uppercase
+.main__product_card-info-divider
+    outline: 3px solid #f16d7f
+    width: 63px
+    margin-top: 12px
+.main__product_card-info-title
+    margin-top: 12px
+    font:
+        size: 18px
+        weight: $light
+    text-transform: uppercase
+    color: #4d4d4d
+.main__product_card-info-description
+    margin-top: 48px
+    font:
+        size: 14px
+        weight: $light
+    text-align: center
+    color: #5e5e5e
+.main__product_card-info-cost
+    margin: 32px 0
+    font:
+        size: 24px
+        weight: $light
+    color: $pink
+.main__product_card-options
+    width: 100%
+    height: 244px
+    +flex(column, center, center)
+.main__product_card-filter-options
+    width: 100%
+    +flex(row, center, center)
+.main__product_card-options-menu
+    margin-right: 23px
+    &:last-of-type
+        margin-right: 0px
+.main__product_card-options-button
+    width: 212px
+    height: 48px
+    margin-top: 48px
+    padding-left: 16px
+    +flex(row, center, center)
+    position: relative
+.main__product_card-options-button-icon
+    position: absolute
+    left: 24px
+    fill: $pink
+.main__cart_content
+    margin-top: 96px
+    margin-bottom: 128px
+    +flex(row, space-between, flex-start)
+.main__cart_content-cards
+    width: 57%
+.main__cart_content-cards-item_2
+    margin-top: 40px
+.main__cart_content-buttons
+    +flex(row, space-between, center)
+    margin-top: 72px
+.main__cart_content-buttons-clear
+    width: 36%
+    height: 50px
+.main__cart_content-buttons-continue
+    width: 35%
+    height: 50px
+.main__cart_content-form, .main__registration-form
+    width: 32%
+.main__cart_content-form-input-wrapper
+    height: 306px
+    +flex(column, center, flex-start)
+.main__cart_content-form-title
+    font:
+        size: 16px
+        weight: $light
+    color: $black
+    text-transform: uppercase
+.main__cart_content-form-input, .main__registration-form-input
+    width: 100%
+    height: 45px
+    border: 1px solid #a4a4a4
+    margin-top: 20px
+    padding: 0px 17px 0px 17px
+.main__cart_content-form-input::placeholder
+    color: #b1b1b1
+.main__registration-form-radio-alt
+    display: none
+.main__cart_content-form-input-submit
+    width: 101px
+    height: 35px
+    margin-top: 23px
+.main__cart_content-checkout-wrapper
+    height: 214px
+    margin-top: 40px
+    background-color: #f5f3f3
+    +flex(column, flex-start, center)
+.main__cart_content-checkout-sum
+    width: 82%
+    +flex(column, flex-start, flex-end)
+.main__cart_content-checkout-sum-subtotal
+    margin-top: 39px
+    font:
+        size: 11px
+        weight: $regular
+    text-transform: uppercase
+    color: #4a4a4a
+    &-sum
+        margin-left: 20px
+.main__cart_content-checkout-sum-total
+    margin-top: 12px
+    margin-right: 3px
+    font:
+        size: 16px
+        weight: $light
+    text-transform: uppercase
+    color: $black
+    &-sum
+        margin-left: 20px
+        font-weight: $bold
+        color: $pink
+.main__cart_content-checkout-btn
+    width: 100%
+    +flex(column, flex-start, center)
+.main__cart_content-checkout-sum-divider
+    width: 78%
+    outline: 1px solid #e2e2e2
+    margin-top: 21px
+.main__cart_content-checkout-btn-submit
+    width: 77%
+    height: 50px
+    margin-top: 17px
+.main__registration
+    margin-top: 64px
+    margin-bottom: 96px
+    +flex(row, space-between, flex-start)
+.main__registration-form-input-wrapper
+    +flex(column, center, flex-start)
+.main__registration-form-title
+    font:
+        size: 16px
+        weight: $light
+    color: $black
+.main__registration-form-input::placeholder
+    color: #b1b1b1
+.main__registration-form-radio-wrapper
+    +flex(row, flex-start, center)
+    margin-top: 31px
+    margin-bottom: 33px
+.main__registration-form-radio
+    margin-right: 10px
+    margin-left: 20px
+.main__registration-form-radio:first-of-type
+    margin-left: 0px
+.main__registration-form-radio-value
+    font:
+        size: 11px
+        weight: $light
+    &-alt
+        display: none
+.main__registration-form-password-hint
+    font:
+        size: 13px
+        weight: $light
+    color: #b1b1b1
+    margin-top: 15px
+.main__registration-form-btn
+    width: 167px
+    height: 50px
+    margin-top: 39px
+    padding-left: 25px
+    fill: $white
+    +flex(row, flex-start, center)
+    position: relative
+.main__registration-form-icon
+    position: absolute
+    right: 25px
+.main__registration-description
+    width: 57%
+.main__registration-description-title
+    font:
+        size: 24px
+        weight: $light
+    color: #000
+    text-transform: uppercase
+    margin-bottom: 22px
+.main__registration-description-description
+    font:
+        size: 24px
+        weight: $light
+    color: #000
+    margin-bottom: 21px
+.main__registration-description-list
+    margin-top: 16px
+    font:
+        size: 24px
+        weight: $light
+    color: #000
+    +flex(row, flex-start, flex-start)
+.main__registration-description-list:first-of-type
+    margin-top: 0px
+.main__registration-description-list-icon
+    margin-right: 23px
+.main__registration-description-list-text
+    width: 90%
+.footer
+    height: 79px
+    background-color: $black
+.footer__copyright
+    font:
+        size: 16px
+        weight: $regular
+    color: $white
+.footer__social
+    width: 148px
+    +flex(row, space-between, center)
+@import effects
+@import adaptive
