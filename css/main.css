@@ -1000,7 +1000,7 @@ a {
   margin-bottom: 48px;
 }
 
-.main__featured_cards {
+.main__featured_cards, .main__catalog-cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
